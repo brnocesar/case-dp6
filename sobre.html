@@ -88,22 +88,23 @@
                     <ul>
                         <li>
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" placeholder="Nome Teste">
+                            <input type="text" id="nome" placeholder="Nome Teste" onblur="preencheuCampo('nome')">
                         </li>
                         <li>
                             <label for="email">E-Mail</label>
-                            <input type="email" id="email" placeholder="email@dominio.com">
+                            <input type="email" id="email" placeholder="email@dominio.com" onblur="preencheuCampo('email')">
                         </li>
                         <li>
                             <label for="telefone">Telefone</label>
-                            <input type="tel" id="telefone" placeholder="(11) 4455-4455">
+                            <input type="tel" id="telefone" placeholder="(11) 4455-4455" onblur="preencheuCampo('telefone')">
                         </li>
                         <li>
                             <label for="aceito">Aceito que entrem em contato</label>
-                            <input type="checkbox" id="aceito">
+                            <input type="checkbox" id="aceito" onclick="preencheuCampo('aceito')">
                         </li>
                         <li>
-                            <button type="submit">Enviar</button>
+                            <button type="submit" onclick="enviaFormulario()">Enviar</button>
+                            <!-- onsubmit não funcionou, então vai onclick mesmo -->
                         </li>
                     </ul>
                 </form>
